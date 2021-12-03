@@ -15,8 +15,22 @@
     </sdPageHeader>
     <Main>
       <a-row :gutter="25">
-        <a-col :md="12" :xs="24">
-          <Tabs :data="dataIcon" color="#ffffff"></Tabs>
+        <a-col :md="24" :xs="24">
+          <a-tabs>
+            <a-tab-pane key="1" tab="MTBF/MTTR">
+              <a-col :xs="24">
+                <sdCards title="Basic Usage">
+                  <BasicTable />
+                </sdCards>
+              </a-col>
+            </a-tab-pane>
+            <a-tab-pane key="2" tab="เวลาเดินเครื่อง">
+              <a-col :xs="24">
+                <MonthCalendar />
+              </a-col>
+            </a-tab-pane>
+            <a-tab-pane key="3" tab="Detail"> Content of tab 3 </a-tab-pane>
+          </a-tabs>
         </a-col>
       </a-row>
     </Main>
@@ -25,16 +39,19 @@
 
 <script>
 import { Main } from '../styled';
-import Tabs from '../../components/tabs/Tabs';
-import { data, dataIcon, icon } from '../../demoData/tab-data.json';
+// import { data, dataIcon, icon } from '../../demoData/tab-data.json';
+import BasicTable from '../table/overview/BasicTable.vue';
+import MonthCalendar from '../apps/calendar/overview/Month.vue';
+
 export default {
   name: 'DbpPage',
   components: {
     Main,
-    Tabs,
+    BasicTable,
+    MonthCalendar,
   },
-  setup() {
-    return { data, dataIcon, icon };
-  },
+  // setup() {
+  //   return { data, dataIcon, icon };
+  // },
 };
 </script>
