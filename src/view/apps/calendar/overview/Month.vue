@@ -10,7 +10,7 @@
     >
       <AddNewEvent :onHandleAddEvent="addNew" :defaultValue="defaultValue" />
     </sdModal>
-    <div class="calendar-header">
+    <!-- <div class="calendar-header">
       <div class="calendar-header__left">
         <sdButton class="btn-today" type="light" outlined>
           <router-link to="./day">Today</router-link>
@@ -65,7 +65,7 @@
           Schedule
         </router-link>
       </div>
-    </div>
+    </div> -->
     <BlockViewCalendarWrapper class="table-responsive">
       <a-calendar
         :headerRender="

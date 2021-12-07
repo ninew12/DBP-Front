@@ -4,7 +4,7 @@
     <div class="auth-contents">
       <a-form layout="vertical">
         <sdHeading as="h3" style="text-align: center">
-          <img :src="require('@/static/img/logo-dbp.png')" alt="" width="128" height="128" />
+          <img :src="require('@/static/img/dbplogo2.png')" alt="" width="164" height="164" />
         </sdHeading>
         <a-form-item name="username" label="Username">
           <a-input type="text" v-model:value="username" placeholder="Username" />
