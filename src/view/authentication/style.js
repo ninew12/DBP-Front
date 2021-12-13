@@ -2,7 +2,7 @@ import Styled from 'vue3-styled-components';
 
 const AuthWrapper = Styled.div`
   height: 100%;
-  padding: 12rem;
+  padding: 9rem;
   @media only screen and (max-width: 1599px){
     padding: 25px;
   }

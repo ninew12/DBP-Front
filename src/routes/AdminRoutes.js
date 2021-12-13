@@ -42,6 +42,28 @@ const routes = [
     ],
   },
   {
+    path: '/work',
+    name: 'DbpWork',
+    component: () => import(/* webpackChunkName: "Blank" */ '@/view/dbpwork/DbpWork.vue'),
+    children: [
+      {
+        path: 'detail',
+        name: 'detail-view',
+        component: () => import(/* webpackChunkName: "axios-view" */ '@/view/dbpwork/View.vue'),
+      },
+    ],
+  },
+  {
+    path: '/users',
+    name: 'DbpUsers',
+    component: () => import(/* webpackChunkName: "Blank" */ '@/view/dbpusers/DbpUsers.vue'),
+  },
+  {
+    path: '/machine',
+    name: 'DbpMachine',
+    component: () => import(/* webpackChunkName: "Blank" */ '@/view/dbpmachine/DbpMachine.vue'),
+  },
+  {
     path: '/dbp',
     name: 'DbpPage',
     component: () => import(/* webpackChunkName: "Blank" */ '@/view/dbphome/DbpPage.vue'),

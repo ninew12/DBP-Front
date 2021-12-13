@@ -5,11 +5,55 @@
     :mode="mode"
     :theme="darkMode ? 'dark' : 'light'"
   >
+    <a-menu-item @click="toggleCollapsed" key="work">
+      <router-link to="/work">
+        <sdFeatherIcons type="folder" />
+        <span>
+          ประวัติงาน
+        </span>
+      </router-link>
+    </a-menu-item>
+    <a-menu-item @click="toggleCollapsed" key="users">
+      <router-link to="/users">
+        <sdFeatherIcons type="users" />
+        <span>
+          จัดการผู้ใช้
+        </span>
+      </router-link>
+    </a-menu-item>
+    <a-menu-item @click="toggleCollapsed" key="machine">
+      <router-link to="/machine">
+        <sdFeatherIcons type="tool" />
+        <span>
+          จัดการเครื่องจักร
+        </span>
+      </router-link>
+    </a-menu-item>
     <a-sub-menu key="dbp">
-      <template v-slot:title><sdFeatherIcons type="home" /><span>DBP HOME</span></template>
+      <template v-slot:title><sdFeatherIcons type="file" /><span>Report</span></template>
+      <a-menu-item @click="toggleCollapsed" key="dbphome">
+        <router-link to="/dbp">
+          ภาพรวม
+        </router-link>
+      </a-menu-item>
       <a-menu-item @click="toggleCollapsed" key="dbphome">
         <router-link to="/dbp">
           BD
+        </router-link>
+      </a-menu-item>
+      <a-menu-item @click="toggleCollapsed" key="dbphome">
+        <router-link to="/dbp">
+          แผน PM
+        </router-link>
+      </a-menu-item>
+      <a-menu-item @click="toggleCollapsed" key="dbphome">
+        <router-link to="/dbp">
+          Ranking
+        </router-link>
+      </a-menu-item>
+      <a-menu-item @click="toggleCollapsed" key="dbphome">
+        <router-link to="/dbp">
+          เวลาทำงาน
         </router-link>
       </a-menu-item>
     </a-sub-menu>
